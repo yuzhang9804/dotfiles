@@ -13,13 +13,15 @@ plugins=(
 )
 
 # https://ohmyz.sh/
-source $ZSH/oh-my-zsh.sh
+source $HOME/.oh-my-zsh/oh-my-zsh.sh
+
+# PATH
+export PATH="$HOME/.local/bin:$PATH"
 
 # -------------------------------- #
 # Node Package Manager
 # -------------------------------- #
 # https://github.com/antfu/ni
-
 alias nio="ni --prefer-offline"
 alias s="nr start"
 alias d="nr dev"
@@ -39,10 +41,6 @@ alias re="nr release"
 # -------------------------------- #
 # Git
 # -------------------------------- #
-
-# Use github/hub
-alias git=hub
-
 # Go to project root
 alias grt='cd "$(git rev-parse --show-toplevel)"'
 
@@ -175,3 +173,7 @@ function serve() {
     live-server $1
   fi
 }
+
+# alias
+alias vi='lvim'
+
